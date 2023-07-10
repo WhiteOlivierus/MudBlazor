@@ -60,6 +60,15 @@
     }
 }
 
+.mud-fab-centered {
+    position: absolute;
+    display: flex !important;
+    left: 0;
+    width: 100%;
+    justify-content: center;
+    margin-top: calc(var(--mud-appbar-height) * -1);
+}
+
 .mud-fab-label {
     width: 100%;
     display: inherit;

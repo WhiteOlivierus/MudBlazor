@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.AspNetCore.Components;
-using MudBlazor.Extensions;
 using MudBlazor.Utilities;
 
 namespace MudBlazor
@@ -14,6 +13,7 @@ namespace MudBlazor
           .AddClass($"mud-fab-size-{Size.ToDescriptionString()}")
           .AddClass($"mud-ripple", !DisableRipple && !GetDisabledState())
           .AddClass($"mud-fab-disable-elevation", DisableElevation)
+          .AddClass("mud-fab-centered", BottomNav)
           .AddClass(Class)
         .Build();
 
@@ -23,6 +23,13 @@ namespace MudBlazor
         [Parameter]
         [Category(CategoryTypes.Button.Appearance)]
         public Color Color { get; set; } = Color.Default;
+
+        /// <summary>
+        /// Adds the fab button in the middle of a bottom navbar
+        /// </summary>
+        [Parameter]
+        [Category(CategoryTypes.Button.Appearance)]
+        public bool BottomNav { get; set; } = false;
 
         /// <summary>
         /// The Size of the component.
